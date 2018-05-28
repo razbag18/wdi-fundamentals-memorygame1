@@ -28,9 +28,9 @@ var cards = [
 var cardsInPlay = [];
 var checkForMatch = function () {
 	if (cardsInPlay[0] === cardsInPlay[1]) {
-	console.log("You found a match");
+	alert("You found a match");
 } else {
-		console.log("Sorry, try again.");
+		alert("Sorry, try again.");
 	}
 	}
 //creating function called flipCard 
@@ -63,5 +63,7 @@ cardElement.addEventListener("click", flipCard);
 document.getElementById("game-board").appendChild(cardElement);
 }
 };
+
 //passing in as arguments represent the index numbers of the cards un the cards array we want to flip over
 createBoard();
+

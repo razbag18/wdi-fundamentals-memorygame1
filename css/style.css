@@ -73,6 +73,23 @@ footer {
 	letter-spacing: .08em;
 	font-weight: 500;
 }
+input {
+	text-transform: uppercase;
+	background-color: #0D2C40;
+    border: none;
+    font-family: Raleway;
+    letter-spacing: 1px;
+	font-weight: 600;
+	font-size: 15px;
+    color: white;
+    padding: 15px 25px;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 15px;
+}
+input:hover {
+    background-color: #F15B31;
+}
 
 .copyright {
 	font-family: Raleway;
@@ -98,3 +115,4 @@ font-size: 0;
 	font-weight: 700;
 	font-family: Raleway;
 }
+
