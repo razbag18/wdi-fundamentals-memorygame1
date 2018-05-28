@@ -33,14 +33,14 @@ var checkForMatch = function () {
 		console.log("Sorry, try again.");
 	}
 	}
-//creating function called flipCard with one parameter, cardId
-var flipCard = function (cardId) {
+//creating function called flipCard 
+var flipCard = function () {
+cardId = this.getAttribute("data-id");
 console.log("User flipped " + cards[cardId].rank);
 cardsInPlay.push(cards[cardId].rank);
 console.log(cards[cardId].cardImage);
 console.log(cards[cardId].suit);
-
-
+this.setAttribute("src", cards[cardId].cardImage);
 
 // Check if two cards being played
 if (cardsInPlay.length === 2) {
@@ -48,6 +48,20 @@ if (cardsInPlay.length === 2) {
 checkForMatch();
 }
 };
+
+//created new function createBoard
+var createBoard = function (){
+	//loop through cards to create card element for board
+for (var i = 0; i < cards.length; i++){
+	//create img element 
+var cardElement =document.createElement("img");
+//sourcing the back of card image
+cardElement.setAttribute("src","images/back.png");
+//data- attributes are meant to store data about an element that is not tied to a style.
+cardElement.setAttribute("data-id", i);
+cardElement.addEventListener("click", flipCard);
+document.getElementById("game-board").appendChild(cardElement);
+}
+};
 //passing in as arguments represent the index numbers of the cards un the cards array we want to flip over
-flipCard(0);
-flipCard(2);
+createBoard();
